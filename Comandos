@@ -13,3 +13,5 @@ pipenv install gunicorn = servidor de aplicativo do python que vai fazer a gest�
 heroku apps:create 'nome_da_app desejada sem as aspas' = cria uma app para se conectar com o heroku
 
 git remote -v = para ver a criação do repositorio heroku
+
+criamos uma branch para enviar para o git e fazer o deploy
