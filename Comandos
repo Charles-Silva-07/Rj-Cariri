@@ -14,4 +14,18 @@ heroku apps:create 'nome_da_app desejada sem as aspas' = cria uma app para se co
 
 git remote -v = para ver a criação do repositorio heroku
 
-criamos uma branch para enviar para o git e fazer o deploy
+criamos uma branch para enviar para o git e fazer o deploy SO COMITAMOS MESMO para enviar foi via terminal
+
+no terminal git push heroku 1:master -f = o menos f e para força, ai o heroku recebe nossa aplicação atraves de um push
+do git  OBS: VAI DA ERRO mais e corrigido abaixo
+
+heroku config:set DISABLE_COLLECTSTATIC=1  = DESABILITAMOS O DISABLE_COLLECTSTATIC
+
+DEPOIS fizemos o envio nomavente
+
+heroku open = para abrir
+
+HABILITAMOS O DEPLOY AUTOMATICO NO HEROKU VIA GIT ESPERANDO O C.I
+
+
+
