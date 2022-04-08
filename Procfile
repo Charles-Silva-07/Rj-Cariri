@@ -1,0 +1,1 @@
+web: gunicorn rjcariri.wsgi --log-file -
