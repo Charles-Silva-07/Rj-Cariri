@@ -32,6 +32,7 @@ OLA DJANGO
 1 - entramos na pasta do projeto cd rjcariri
 2 - python manage.py startapp base = criamos a app base que servira para todas as outras app
 3 - @python "%VIRTUAL_ENV%\..\manage.py" %*
+4 - configuramos a viwes a urls o setings e o app
 
 
 
