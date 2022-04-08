@@ -1,0 +1,15 @@
+pipenv install django = cria um ambiente virtual e instala o django
+
+django-admin startproject rjcariri . = o ponto no fim faz com que seja criado o projeto na pasta raiz
+
+python manage.py runserver = roda o servidor django
+
+crtl + c =  para o servidor django
+
+criaramos o arquivo Procfile = para onformar ao heroku como vai rodar nossa ap
+
+pipenv install gunicorn = servidor de aplicativo do python que vai fazer a gestão das conexões pra gente
+
+heroku apps:create 'nome_da_app desejada sem as aspas' = cria uma app para se conectar com o heroku
+
+git remote -v = para ver a criação do repositorio heroku
