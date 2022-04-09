@@ -42,9 +42,9 @@ agora na raiz do projeto criamos o arquivo pytest.ini
 depois que configuramos o python decouple para não mostrar o erro com informativo django na web
 9 - heroku config:set DEBUG=False
 
-
-
-
+ from django.core.management.utils import get_random_secret_key
+ get_random_secret_key()
+ heroku config:set SECRET_KEY=
 
 
 
