@@ -7,6 +7,10 @@ name = "pypi"
 django = "*"
 flake8 = "*"
 gunicorn = "*"
+pytest-django = "*"
+pytest-cov = "*"
+codecov = "*"
+python-decouple = "*"
 
 [dev-packages]
 

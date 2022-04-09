@@ -16,7 +16,7 @@ git remote -v = para ver a criação do repositorio heroku
 
 criamos uma branch para enviar para o git e fazer o deploy SO COMITAMOS MESMO para enviar foi via terminal
 
-no terminal git push heroku 1:master -f = o menos f e para força, ai o heroku recebe nossa aplicação atraves de um push
+git push heroku 7:master -f = o menos f e para força, ai o heroku recebe nossa aplicação atraves de um push
 do git  OBS: VAI DA ERRO mais e corrigido abaixo
 
 heroku config:set DISABLE_COLLECTSTATIC=1  = DESABILITAMOS O DISABLE_COLLECTSTATIC
@@ -33,6 +33,17 @@ OLA DJANGO
 2 - python manage.py startapp base = criamos a app base que servira para todas as outras app
 3 - @python "%VIRTUAL_ENV%\..\manage.py" %*
 4 - configuramos a viwes a urls o setings e o app
+5 - pipenv install 'pytest-django'
+agora na raiz do projeto criamos o arquivo pytest.ini
+
+6 - pipenv install 'pytest-cov' codecov = para nosso projeto com cobertura de teste
+7 - pipenv run pytest --cov=rjcariri = para rodar o teste
+8 - pipenv install 'python-decouple'
+depois que configuramos o python decouple para não mostrar o erro com informativo django na web
+9 - heroku config:set DEBUG=False
+
+
+
 
 
 
