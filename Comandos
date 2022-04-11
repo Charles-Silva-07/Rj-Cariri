@@ -55,3 +55,5 @@ Nesse caso abaixo utilizamos a biblioteca partial do próprio python para defini
 
 11 - Testando Postgresql
 12 - pipenv install psycopg2-binary
+13 - mng collectstatic
+
