@@ -46,5 +46,11 @@ depois que configuramos o python decouple para não mostrar o erro com informati
  get_random_secret_key()
  heroku config:set SECRET_KEY=
 
+10 - pipenv install dj-database-url
+     configuração para o banco de dados
+     Essa biblioteca consegue gerar o ENGINE e o NAME baseado na url do banco de dados
+Ele tem uma função parse que consegue gerar o valor do  ENGINE baseado no url
 
+Nesse caso abaixo utilizamos a biblioteca partial do próprio python para definir que o parâmetro com max age sera de 600
 
+11 - Testando Postgresql
