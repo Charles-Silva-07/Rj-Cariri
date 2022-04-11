@@ -54,3 +54,4 @@ Ele tem uma função parse que consegue gerar o valor do  ENGINE baseado no url
 Nesse caso abaixo utilizamos a biblioteca partial do próprio python para definir que o parâmetro com max age sera de 600
 
 11 - Testando Postgresql
+12 - pipenv install psycopg2-binary

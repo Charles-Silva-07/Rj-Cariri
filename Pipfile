@@ -12,6 +12,7 @@ codecov = "*"
 python-decouple = "*"
 dj-database-url = "*"
 django = "*"
+psycopg2-binary = "*"
 
 [dev-packages]
 
