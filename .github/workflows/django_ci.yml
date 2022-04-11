@@ -37,7 +37,7 @@ jobs:
         pipenv run flake8
     - name: Test with pytest
       run: |
-        pipenv run pytest rjcariri --cov=pypro
+        pipenv run pytest rjcariri --cov=rjcariri
     - name: Posting Coverage
       env:
         CODECOV_TOKEN: "e9e64690-7443-4174-b56e-23b4137376a1"
