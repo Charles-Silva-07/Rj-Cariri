@@ -4,7 +4,6 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-django = "*"
 flake8 = "*"
 gunicorn = "*"
 pytest-django = "*"
@@ -12,6 +11,7 @@ pytest-cov = "*"
 codecov = "*"
 python-decouple = "*"
 dj-database-url = "*"
+django = "*"
 
 [dev-packages]
 
