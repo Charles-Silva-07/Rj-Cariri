@@ -13,6 +13,8 @@ python-decouple = "*"
 dj-database-url = "*"
 django = "*"
 psycopg2-binary = "*"
+django-s3-folder-storage = "*"
+collectfast = "*"
 
 [dev-packages]
 

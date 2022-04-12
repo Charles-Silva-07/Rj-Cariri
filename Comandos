@@ -58,3 +58,20 @@ Nesse caso abaixo utilizamos a biblioteca partial do próprio python para defini
 13 - mng collectstatic
 14 -
 
+Comando para coletar arquivos estáticos:
+pipenv run python manage.py collectstatic --no-input
+
+Instalando lib para upload de arquivos estáticos:
+pipenv install django_s3_folder_storage
+
+pipenv install collectfast
+
+Comandos para setar variáveis do AWS no Keroku:
+
+heroku config:set AWS_ACCESS_KEY_ID=
+heroku config:set AWS_SECRET_ACCESS_KEY=
+heroku config:set AWS_STORAGE_BUCKET_NAME=
+
+Comando para reabilitar collectstatic no Heroku:
+
+heroku config:unset DISABLE_COLLECTSTATIC
