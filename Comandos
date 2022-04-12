@@ -75,3 +75,5 @@ heroku config:set AWS_STORAGE_BUCKET_NAME=
 Comando para reabilitar collectstatic no Heroku:
 
 heroku config:unset DISABLE_COLLECTSTATIC
+
+15 -
