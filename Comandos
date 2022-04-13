@@ -77,4 +77,10 @@ Comando para reabilitar collectstatic no Heroku:
 heroku config:unset DISABLE_COLLECTSTATIC
 
 15 - heroku run python manage.py createsuperuser
-16 -
+
+    CONFIGURANDO BACKUP NO HEROKU
+16 - heroku pg:backups:schedule DATABASE_URL --at '02:00 America/Sao_Paulo'
+17 - heroku pg:backups:schedules
+18 - heroku pg:backups:download
+19 - heroku pg:backups
+
