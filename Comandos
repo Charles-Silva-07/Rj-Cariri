@@ -77,3 +77,4 @@ Comando para reabilitar collectstatic no Heroku:
 heroku config:unset DISABLE_COLLECTSTATIC
 
 15 - heroku run python manage.py createsuperuser
+16 -
