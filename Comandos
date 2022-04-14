@@ -83,4 +83,5 @@ heroku config:unset DISABLE_COLLECTSTATIC
 17 - heroku pg:backups:schedules
 18 - heroku pg:backups:download
 19 - heroku pg:backups
+     ASSIM PROTEJEMOS NOSSO DADOS CASO VENHA ACONTERCER ALGUMA COISA COM NOSSO BANCO
 
