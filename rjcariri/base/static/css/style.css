@@ -15,7 +15,7 @@ h2{
 	width:100%;
 	max-width:350px;
 	text-align:center;
-	padding-top:10px;
+	padding:10px;
 }
 
 .logo{
@@ -24,8 +24,8 @@ h2{
 }
 
 .remember {
-	padding-top: 12px;
-	padding-bottom: 12px;
+	padding-top: 20px;
+	padding-bottom: 20px;
 }
 
 .gray{

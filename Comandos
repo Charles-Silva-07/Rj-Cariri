@@ -85,3 +85,11 @@ heroku config:unset DISABLE_COLLECTSTATIC
 19 - heroku pg:backups
      ASSIM PROTEJEMOS NOSSO DADOS CASO VENHA ACONTERCER ALGUMA COISA COM NOSSO BANCO
 
+http://127.0.0.1:8000/accounts/signup/
+
+http://127.0.0.1:8000/accounts/login/
+
+http://127.0.0.1:8000/accounts/logout/
+https://www.fabioruicci.com.br/artigos/tutorial-django-cadastro-e-login-de-usuarios-apenas-com-e-mail-e-senha/
+
+default_auto_field='django.db.models.BigAutoField'

@@ -1,5 +1,4 @@
 {% load static %}
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -20,30 +19,20 @@
 
 <body>
 	<div class="area">
-
-		<img class="logo" src="{% static 'images/LogoM.png' %}"/>
-		<h2>Rj Cariri Login</h2>
+		<h2>Cadastre-se</h2>
 
 		<form>
 			<input type="email" name="email" placeholder="Digite seu e-mail" class="form-control">
 
 			<input type="password" name="password" placeholder="Digite sua senha" class="form-control">
 
-			<label class="remember">
-				<input type="checkbox" name="remember" value="1" />
-				Lembrar Senha
-			</label>
 			<br>
 			<label class="remember">
-				<a href="{% # %}">Cadastre-se</a>
+				<a href="http://127.0.0.1:8000/accounts/signup/">Cadastre-se</a>
 			</label>
 			<br>
 			<input type="submit" value="Entrar" class="btn- btn-lg btn-block btn-primary ">
-
-
 		</form>
-
-
 			<p class="gray padding"> 2022 </p>
 	</div>
 

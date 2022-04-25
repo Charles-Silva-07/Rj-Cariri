@@ -1,0 +1,16 @@
+body{
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif ;
+
+}
+
+.navbar-brand{
+    color: #fff9f3;
+}
+
+.nav-link active{
+    color: #fff9f3;
+}
+
+.logo_painel{
+    width: 105px;
+}
