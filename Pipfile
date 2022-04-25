@@ -15,6 +15,7 @@ django = "*"
 psycopg2-binary = "*"
 django-s3-folder-storage = "*"
 collectfast = "*"
+sync = "*"
 
 [dev-packages]
 

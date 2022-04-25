@@ -15,10 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-
-from rjcariri.base.views import home
+from rjcariri.base.views import login, painel
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('home', home, name='home'),
+    path('login/', login),
+    path('painel/', painel),
 ]
