@@ -92,4 +92,78 @@ http://127.0.0.1:8000/accounts/login/
 http://127.0.0.1:8000/accounts/logout/
 https://www.fabioruicci.com.br/artigos/tutorial-django-cadastro-e-login-de-usuarios-apenas-com-e-mail-e-senha/
 
-default_auto_field='django.db.models.BigAutoField'
+
+
+
+
+py -3 -m venv .venv
+.venv\Scripts\activate  = ativar virtual env
+.venv\Scripts\deactivate = desativar o virtual env
+python.exe -m pip install --upgrade pip =  atualiza o pip
+
+pip freeze > requirements.txt = criar arquivo requirements
+pip freeze > requirements-dev.txt = para desenvolvedores
+
+pip install -r requirements.txt = quando fazemos um clone que tem esse arquivo com as lib do projeto
+
+@python "%VIRTUAL_ENV%\..\manage.py" %*  mng.bat
+
+python -m venv venv = criar um ambiente virtual
+
+cd venv\Scripts dentro da pasta scripts um activate
+cd.. cd.. duas vezes para voltar a raiz
+pip install django = instalando o django
+
+django-admin startproject project . = criar um projeto inicial django
+python manage.py startapp nome_da_app
+
+instal o wampserver
+testar wanpserver localhost/phpmyadmin/
+
+configuramos o settings e colocamos o InnoDb = banco de dados relacional que da para trabalhar
+com produtos pedidos etc..
+
+depois baixar o pacote de extensão do mysql
+ pip install mysqlclient
+
+rodar o migrate para migrar para o banco de dados
+
+python manage.py migrate
+
+criar uma rota para testa nosso sitema
+em urls
+
+criamos uma pasta templates e dentro dela criamos dois arquivos html um main.html e outro home.html
+no main.html vai refletir para as outras pagina
+ no body incluimos
+ {% block content %}
+ {% endblock %}
+ e tambe a cnd do bootstrap
+
+no settings linkamos para o css
+
+sempre que formos trabalhar com form em django temos que colocar o {% csrf_token %} no fomr
+
+pip install Collectfast
+python manage.py collectstatic
+heroku config:set DISABLE_COLLECTSTATIC=1   = Desabilita a coleta
+heroku config:unset DISABLE_COLLECTSTATIC = habilita novamente a coleta de arquivos estaticos
+heroku run pip list
+
+heroku git:remote -a rj-cariri
+git add . = para adicionar todos os arquivos
+heroku run python manage.py migrate
+git commit -m "correção"
+git push heroku master
+git push heroku 13:master -f
+heroku run python manage.py showmigrations = ver se as migrações subiu para o heroku
+
+
+GERAR CHAVE SECRETA PARA O SECRET_KEY DO SETTINGS
+python
+from django.core.management.utils import get_random_secret_key
+get_random_secret_key()
+heroku config:set SECRET_KEY=
+heroku --log
+
+
