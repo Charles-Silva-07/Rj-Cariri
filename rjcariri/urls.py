@@ -19,6 +19,6 @@ from rjcariri.base.views import login, painel
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('login/', login),
+    path('login/', login, name='login'),
     path('painel/', painel),
 ]
