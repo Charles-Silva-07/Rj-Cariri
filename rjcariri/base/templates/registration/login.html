@@ -1,0 +1,31 @@
+{% extends 'base/main.html' %}
+
+{% load static %}
+
+{% block content %}
+<title>{% block title %}cariri Login{% endblock title %}</title>
+<body>
+
+<div class="area">
+    <img class="logo" src="{% static 'images/LogoM.png' %}"/>
+    <h2>Rj Cariri Login</h2>
+    <form method="post" action="{% url 'login' %}">
+        {% csrf_token %}
+        <table>
+            <tr>
+                <td>{{ form.username.label_tag }}</td>
+                <td>{{ form.username }}</td>
+            </tr>
+            <tr>
+                <td>{{ form.password.label_tag }}</td>
+                <td>{{ form.password }}</td>
+            </tr>
+        </table>
+
+        <input type="submit" value="Entrar" class="btn- btn-lw btn-block btn-primary mt-1">
+        <input type="hidden" name="next" value="{{ next }}">
+    </form>
+    <p class="gray padding"> 2022 </p>
+</div>
+</body>
+{% endblock %}

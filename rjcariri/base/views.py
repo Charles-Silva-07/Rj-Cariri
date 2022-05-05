@@ -1,10 +1,9 @@
-
 from django.shortcuts import render
 # Create your views here.
 
 
 def login(request):
-    return render(request, 'base/login.html')
+    return render(request, 'registration/login.html')
 
 
 def painel(request):
