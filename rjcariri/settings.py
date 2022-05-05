@@ -20,6 +20,8 @@ DEBUG = config('DEBUG', cast=bool)
 ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())
 
 AUTH_USER_MODEL = 'base.User'
+
+LOGIN_REDIRECT_URL = '/painel/'
 # Application definition
 
 INSTALLED_APPS = [
@@ -48,7 +50,9 @@ ROOT_URLCONF = 'rjcariri.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

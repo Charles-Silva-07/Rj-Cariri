@@ -17,6 +17,7 @@ django-s3-folder-storage = "*"
 collectfast = "*"
 django-allauth = "*"
 pytest = "*"
+model-bakery = "*"
 
 [dev-packages]
 
