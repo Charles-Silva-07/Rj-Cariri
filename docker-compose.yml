@@ -5,11 +5,12 @@ services:
     container_name: rjcariri
     image: postgres
     restart: always
-    volumes
+    volumes:
       - ./.pgdata:/var/lib/postgresql/data
+
     environment:
       - LC_ALL=C.UTF-8
       - POSTGRES_PASSWORD=rjcariri1425
       - POSTGRES_USER=cpdrjcariri
     ports:
-      - 5436:5432
+      - "5436:5432"

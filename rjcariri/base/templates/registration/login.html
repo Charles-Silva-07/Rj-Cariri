@@ -3,28 +3,49 @@
 {% load static %}
 
 {% block content %}
+
+
 <title>{% block title %}cariri Login{% endblock title %}</title>
 <body>
 
-<div class="area">
-    <img class="logo" src="{% static 'images/LogoM.png' %}"/>
-    <h2>Rj Cariri Login</h2>
-    <form method="post" action="{% url 'login' %}">
-        {% csrf_token %}
-        <table>
-            <tr>
-                <td>{{ form.username.label_tag }}</td>
-                <td>{{ form.username }}</td>
-            </tr>
-            <tr>
-                <td>{{ form.password.label_tag }}</td>
-                <td>{{ form.password }}</td>
-            </tr>
-        </table>
 
-        <input type="submit" value="Entrar" class="btn- btn-lw btn-block btn-primary mt-1">
-        <input type="hidden" name="next" value="{{ next }}">
+<div class="area">
+
+    <img class="logo" src="{% static 'images/LogoM.png' %}"/>
+
+    {% if next %}
+    {% if user.is_authenticated %}
+    <p>Your account doesn't have access to this page. To proceed,
+        please login with an account that has access.</p>
+    {% else %}
+    <p>Please login to see this page.</p>
+    {% endif %}
+    {% endif %}
+
+    <h2>Faça Login</h2>
+
+    <form name="fomrPainel" id="formPainel" method="post" action="{% url 'login' %}">
+        {% csrf_token %}
+        <div>
+            <input type="email" name="username" placeholder="Digite seu e-mail" class="form-control">
+
+            <input type="password" name="password" placeholder="Digite sua senha" class="form-control">
+
+            <label class="remember">
+                <input type="checkbox" name="remember" value="1"/>
+                Lembrar Senha
+            </label>
+            <br>
+            <input type="submit" value="Entrar" class="btn- btn-lg btn-block btn-primary ">
+
+
+        </div>
+        <br>
+        <p><a href="{% url 'password_reset' %}">Esqueceu a senha</a></p>
+
     </form>
+
+
     <p class="gray padding"> 2022 </p>
 </div>
 </body>
