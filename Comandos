@@ -159,6 +159,7 @@ git push heroku 27:master -f
 heroku run python manage.py showmigrations = ver se as migrações subiu para o heroku
 
 
+
 GERAR CHAVE SECRETA PARA O SECRET_KEY DO SETTINGS
 python
 from django.core.management.utils import get_random_secret_key
