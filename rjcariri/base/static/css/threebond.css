@@ -1,3 +1,26 @@
 body{
     background-color: #EEEEEE;
+    font
+}
+
+.texto-total{
+    text-align: center;
+}
+
+.colunas{
+    text-align: center;
+}
+
+.titulo-th{
+   color: #447cf5;
+   padding: 15px;
+}
+
+.name-volume{
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.logo_painel{
+    width: 8%;
 }

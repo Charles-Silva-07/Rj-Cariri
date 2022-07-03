@@ -88,3 +88,16 @@ class User(AbstractBaseUser, PermissionsMixin):
     def email_user(self, subject, message, from_email=None, **kwargs):
         """Send an email to this user."""
         send_mail(subject, message, from_email, [self.email], **kwargs)
+
+
+class Tabela(models.Model):
+    Ano = models.IntegerField()
+    Semana = models.IntegerField()
+    Secao = models.CharField(max_length=300)
+    Produto = models.IntegerField()
+    Descricao = models.CharField(max_length=300)
+    Quantidade = models.FloatField()
+    Faturamento = models.DecimalField(max_digits=14, decimal_places=2)
+    Positivacao = models.IntegerField()
+    Cobertura = models.IntegerField()
+    Regiao = models.IntegerField()

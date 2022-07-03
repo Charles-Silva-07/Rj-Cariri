@@ -18,6 +18,8 @@ collectfast = "*"
 django-allauth = "*"
 pytest = "*"
 model-bakery = "*"
+pillow = "*"
+openpyxl = "*"
 
 [dev-packages]
 
