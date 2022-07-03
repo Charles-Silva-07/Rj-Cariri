@@ -259,6 +259,8 @@ heroku --log
 
 {% endblock %}
 
+o
+
 
        <div>
             <input type="email" name="email" placeholder="Digite seu e-mail" class="form-control">
