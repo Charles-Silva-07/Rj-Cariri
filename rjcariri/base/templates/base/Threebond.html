@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="/static/css/threebond.css"/>
+    <title>Flash Threebond</title>
+</head>
+<body>
+<div class="container">
+    <h1></h1>
+    <table class="table table-dark table-hover">
+        <thead>
+            <tr>
+                <th class="colunas"  scope="col">CÓDIGO</th>
+                <th class="colunas"  scope="col">PRODUTO</th>
+                <th class="colunas"  scope="col">SEMANAS</th>
+                <th scope="col">22</th>
+                <th scope="col">23</th>
+                <th scope="col">24</th>
+                <th scope="col">25</th>
+                <th scope="col">26</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+
+                <th class="colunas" scope="row">19709</th> <!-- Código do produto -->
+                <th scope="row" colspan="2">COLA THREEBOND CX 12X2G</th>
+                {% for th in threebond %}
+                    {% if th.Produto == 19709 and th.Semana == 22 %}
+                        <td>{{th.Quantidade}}</td>
+                    {% elif th.Produto == 19709 and th.Semana == 23 %}
+                        <td>{{th.Quantidade}}</td>
+                    {% elif th.Produto == 19709 and th.Semana == 24 %}
+                        <td>{{th.Quantidade}}</td>
+                    {% elif th.Produto == 19709 and th.Semana == 25 %}
+                        <td>{{th.Quantidade}}</td>
+                    {% elif th.Produto == 19709 and th.Semana == 26 %}
+                        <td>{{th.Quantidade}}</td>
+                    {% endif %}
+                {% endfor %}
+            </tr>
+
+             <tr>
+                <th class="colunas" scope="row">19711</th> <!-- Código do produto -->
+                <th scope="row" colspan="2">COLA THREEBOND CX 24X2G</th>
+                {% for th in threebond %}
+                    {% if th.Produto == 19711 and th.Semana == 22 %}
+                        <td>{{th.Quantidade}}</td>
+                    {% elif th.Produto == 19711 and th.Semana == 23 %}
+                        <td>{{th.Quantidade}}</td>
+                    {% elif th.Produto == 19711 and th.Semana == 24 %}
+                        <td>{{th.Quantidade}}</td>
+                    {% elif th.Produto == 19711 and th.Semana == 25 %}
+                        <td>{{th.Quantidade}}</td>
+                    {% elif th.Produto == 19711 and th.Semana == 26 %}
+                        <td>{{th.Quantidade}}</td>
+                    {% endif %}
+                {% endfor %}
+            </tr>
+
+        <tr>
+            <th class="texto-total"  scope="row" colspan="3">TOTAL</th>
+            {% for semana, total in quantidade_por_semana.items %}
+                <td>{{total}}</td>
+            {% endfor %}
+        </tr>
+        </tbody>
+    </table>
+
+
+</div>
+</body>
+</html>
+
+
