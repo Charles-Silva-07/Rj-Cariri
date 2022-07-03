@@ -20,15 +20,4 @@ def Threebond(request):
     print(quantidade_por_semana)
 
     return render(request, 'base/Threebond.html', context={'threebond': threebond,
-                                                           'quantidade_por_semana': dict(quantidade_por_semana) })
-
-
-
-# Tabela.objects.values('Semana').annotate(total=Sum('Quantidade'))
-
-
-
-
-
-
-
+                                                           'quantidade_por_semana': dict(quantidade_por_semana)})
