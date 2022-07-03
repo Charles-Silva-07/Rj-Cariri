@@ -33,6 +33,7 @@ INSTALLED_APPS = [
     'collectfast',
     'django.contrib.staticfiles',
     'rjcariri.base',
+
 ]
 
 MIDDLEWARE = [
