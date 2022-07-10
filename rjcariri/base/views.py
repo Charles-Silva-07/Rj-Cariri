@@ -17,7 +17,5 @@ def Threebond(request):
     for row in threebond:
         quantidade_por_semana[row.Semana] += row.Quantidade
 
-    print(quantidade_por_semana)
-
     return render(request, 'base/Threebond.html', context={'threebond': threebond,
                                                            'quantidade_por_semana': dict(quantidade_por_semana)})
