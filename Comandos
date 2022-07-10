@@ -155,9 +155,8 @@ git add . = para adicionar todos os arquivos
 heroku run python manage.py migrate
 git commit -m "correção"
 git push heroku master
-git push heroku 27:master -f
+git push heroku 41:master -f
 heroku run python manage.py showmigrations = ver se as migrações subiu para o heroku
-
 
 
 GERAR CHAVE SECRETA PARA O SECRET_KEY DO SETTINGS
