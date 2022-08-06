@@ -2,11 +2,10 @@ import pandas as pd
 import os
 import django
 
-
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'rjcariri.settings')
 django.setup()
-from django.db.models import Q
-from rjcariri.base.models import Tabela
+from django.db.models import Q  # noqa
+from rjcariri.base.models import Tabela  # noqa
 
 """Ler a planilha"""
 plan = pd.read_excel("vendas.xlsx")
