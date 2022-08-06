@@ -12,10 +12,10 @@ def painel(request):
 
 
 def Threebond(request):
-    threebond = Tabela.objects.filter(Secao='THREEBOND')
+    threebond = Tabela.objects.filter(secao='THREEBOND')
     quantidade_por_semana = defaultdict(int)
     for row in threebond:
-        quantidade_por_semana[row.Semana] += row.Quantidade
+        quantidade_por_semana[row.semana] += row.quantidade
 
     return render(request, 'base/Threebond.html', context={'threebond': threebond,
                                                            'quantidade_por_semana': dict(quantidade_por_semana)})
