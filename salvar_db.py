@@ -1,34 +1,35 @@
 import pandas as pd
 import os
 import django
-from django.db.models import Q
-from rjcariri.base.models import Tabela
 
 
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'rjcariri.settings')
 django.setup()
-
+from django.db.models import Q
+from rjcariri.base.models import Tabela
 
 """Ler a planilha"""
 plan = pd.read_excel("vendas.xlsx")
 
 for i in range(plan.shape[0]):
-    Ano = plan.loc[i, "Ano"]
-    Semana = plan.loc[i, "Semana"]
-    Secao = plan.loc[i, "Secao"]
-    Produto = plan.loc[i, "Produto"]
-    Descricao = plan.loc[i, "Descricao"]
-    Quantidade = plan.loc[i, "Quantidade"]
-    Faturamento = plan.loc[i, "Faturamento"]
-    Positivacao = plan.loc[i, "Positivacao"]
-    Cobertura = plan.loc[i, "Cobertura"]
-    Regiao = plan.loc[i, "Regiao"]
+    ano = plan.loc[i, "ano"]
+    mes = plan.loc[i, "mes"]
+    semana = plan.loc[i, "semana"]
+    secao = plan.loc[i, "secao"]
+    produto = plan.loc[i, "produto"]
+    descricao = plan.loc[i, "descricao"]
+    quantidade = plan.loc[i, "quantidade"]
+    faturamento = plan.loc[i, "faturamento"]
+    positivacao = plan.loc[i, "positivacao"]
+    cobertura = plan.loc[i, "cobertura"]
+    regiao = plan.loc[i, "regiao"]
 
-    criterion1 = Q(Semana=Semana)
-    criterion2 = Q(Produto=Produto)
+    criterion1 = Q(semana=semana)
+    criterion2 = Q(produto=produto)
 
     if Tabela.objects.filter(criterion1 & criterion2).count() == 0:
-        t = Tabela(Ano=Ano, Semana=Semana, Secao=Secao, Produto=Produto, Descricao=Descricao, Quantidade=Quantidade,
-                   Faturamento=Faturamento, Positivacao=Positivacao, Cobertura=Cobertura, Regiao=Regiao)
+        t = Tabela(ano=ano, mes=mes, semana=semana, secao=secao, produto=produto, descricao=descricao,
+                   quantidade=quantidade,
+                   faturamento=faturamento, positivacao=positivacao, cobertura=cobertura, regiao=regiao)
 
         t.save()
