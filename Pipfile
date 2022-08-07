@@ -22,6 +22,7 @@ pandas = "*"
 openpyxl = "*"
 django-core = "*"
 psycopg2 = "*"
+django-extensions = "*"
 
 [dev-packages]
 
