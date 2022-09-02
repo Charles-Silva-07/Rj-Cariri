@@ -215,4 +215,19 @@ class UserAdmin(admin.ModelAdmin):
         return super().response_add(request, obj, post_url_continue)
 
 
-admin.site.register(Tabela)
+@admin.register(Tabela)
+class TableAdmin(admin.ModelAdmin):
+    list_display = (
+        'id',
+        'produto',
+        'ano',
+        'mes',
+        'semana',
+        'secao',
+        'descricao',
+        'quantidade',
+        'faturamento',
+        'positivacao',
+        'cobertura',
+        'regiao',
+    )

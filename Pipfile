@@ -23,6 +23,8 @@ openpyxl = "*"
 django-core = "*"
 psycopg2 = "*"
 django-extensions = "*"
+tqdm = "*"
+ipython = "*"
 
 [dev-packages]
 
