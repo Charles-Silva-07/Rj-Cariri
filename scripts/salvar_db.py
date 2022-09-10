@@ -1,18 +1,17 @@
 import pandas as pd
-import os
-import django
+from tqdm import tqdm
 
-# os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'rjcariri.settings')
-# django.setup()
-from django.db.models import Q  # noqa
-from rjcariri.base.models import Tabela  # noqa
+from django.db.models import Q
+from rjcariri.base.models import Tabela
 
 
 def run():
     """Ler a planilha"""
     plan = pd.read_excel("vendas.xlsx")
 
-    for i in range(plan.shape[0]):
+    number_of_rows = plan.shape[0]
+
+    for i in tqdm(range(number_of_rows)):
         ano = plan.loc[i, "ano"]
         mes = plan.loc[i, "mes"]
         semana = plan.loc[i, "semana"]

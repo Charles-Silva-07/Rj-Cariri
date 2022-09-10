@@ -102,3 +102,6 @@ class Tabela(models.Model):
     positivacao = models.IntegerField()
     cobertura = models.IntegerField()
     regiao = models.IntegerField()
+
+    def __str__(self):
+        return f'{self.produto} - {self.semana}'
